@@ -6,7 +6,7 @@
 #link of Github repository https://github.com/justin-mbca/ProjectGettingCleaningData
 
 
-setwd('/local/workspace01/zhangju/Document/GettingAndCleaningData/project/CI_HAR_Dataset')
+#setwd('/local/workspace01/zhangju/Document/GettingAndCleaningData/project/CI_HAR_Dataset')
 
 #1. Merges the training and the test sets to create one data set.
 

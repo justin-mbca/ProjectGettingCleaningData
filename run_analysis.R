@@ -97,4 +97,4 @@ colnames(data_activity) <- c("object",mod_meanStd)
 
 # combine mean of subject and activity
 meanStd_SubjectActivity <- data.frame(rbind(data_subject,data_activity))
-write.csv(meanStd_SubjectActivity,file="tidyData_Avg_MeanStd.csv",row.names=FALSE)
+write.csv(meanStd_SubjectActivity,file="tidyData_Avg_MeanStd.txt",row.names=FALSE)

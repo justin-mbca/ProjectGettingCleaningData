@@ -10,6 +10,6 @@ Download run_analysis.R file to the data folder
 
 Run script run_analysis.R with command "Rscript run_analysis.R"
 
-Ouput file - a tidy data file names "tidyData_Avg_MeanStd.txt"
+Ouput file - a tidy data file names "tidyData_Avg_MeanStd.txt". The output file is csv format, which could be read with Excel. 
 
-CookBook.md - describe the data and how the script process downloaded data to get the required tidy data
+CookBook.md - describe the data and how the script processed downloaded data to get the required tidy data

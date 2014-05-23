@@ -25,9 +25,9 @@ total <- rbind(train,test)
 feature <- read.csv("features.txt",sep=" ",header=FALSE)
 colnames(feature)=c("index","measurement")
 mean_std_feature <- feature[c(grep("-mean()",feature$measurement,fixed = TRUE),
-                              grep("-std()",feature$measurement,fixed = TRUE),
-                              grep("meanFreq",feature$measurement,fixed = TRUE),
-                              grep("Mean$",feature$measurement,fixed = TRUE)),]
+                              grep("-std()",feature$measurement,fixed = TRUE)),]
+#grep("meanFreq",feature$measurement,fixed = TRUE),
+#grep("Mean$",feature$measurement,fixed = TRUE)
 mean_std <- total[mean_std_feature$index]
 
 
@@ -61,8 +61,6 @@ subject_train <- read.csv("train/subject_train.txt",header=FALSE)
 subject_test <- read.csv("test/subject_test.txt",header=FALSE)
 subject_total <- rbind(subject_train,subject_test)[,1]
 
-#total_SubjectActivity <- data.frame(as.numeric(subject_total),as.numeric(y_total),total)
-#colnames(total_SubjectActivity) <- c("subject","activity",mod_colnames)
 
 #average by subject
 
@@ -77,7 +75,7 @@ for(col in seq(2,dim(total_SortSubject)[2])){
   data_subject <- cbind(data_subject,mean_bySubject)
 }
 data_subject[,1] <- paste("subject",data_subject[,1],sep=" ")
-colnames(data_subject) <- c("mean",mod_meanStd)
+colnames(data_subject) <- c("object",mod_meanStd)
 
 #average by activity 
 
@@ -95,8 +93,8 @@ for(col in seq(2,dim(total_SortActivity)[2])){
 activity <- c("WALKING","WALKING_UPSTAIRS","WALKING_DOWNSTAIRS","SITTING","STANDING","LAYING")
 data_activity[,1] <- activity
 
-colnames(data_activity) <- c("mean",mod_meanStd)
+colnames(data_activity) <- c("object",mod_meanStd)
 
 # combine mean of subject and activity
-mean_SubjectActivity <- data.frame(rbind(data_subject,data_activity))
-write.csv(mean_SubjectActivity,file="tidyData_Avg_MeanStd.csv",row.names=FALSE)
+meanStd_SubjectActivity <- data.frame(rbind(data_subject,data_activity))
+write.csv(meanStd_SubjectActivity,file="tidyData_Avg_MeanStd.csv",row.names=FALSE)

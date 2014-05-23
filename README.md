@@ -10,4 +10,4 @@ Download run_analysis.R file to the data folder
 
 Run script run_analysis.R with command "Rscript run_analysis.R"
 
-Ouput file - a tidy data file names "tidyData_Avg_MeanStd.csv"
+Ouput file - a tidy data file names "tidyData_Avg_MeanStd.txt"

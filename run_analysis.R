@@ -1,3 +1,5 @@
+#!/usr/bin/env R
+
 #Please submit a link to a Github repo with the code for 
 #performing your analysis. The code should have a file run_analysis.R
 #in the main directory that can be run as long as the Samsung data is 
